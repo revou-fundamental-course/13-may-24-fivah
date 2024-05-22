@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO WEB AFIVAH</title>
+    <link rel="stylesheet" type="text/css" href="styleweb.css"
+   
+</head>
+<body>
+        <div class="wrapper">
+            <header class="header">
+                <h1> WELCOME TO WEB SEGITIGA AFIVAH </h1>
+                <h2> Pada web ini dapat menghitung nilai luas dan keliling bangun datar segitiga </h2>
+                <p><strong>Selamat Mencoba :> </strong></p>
+                <p>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.7c2fXZq-e4-OZKtr2jyJpgAAAA&pid=Api&P=0&h=180" width="200px">
+                </p>
+            </header>
+            <article>
+                <aside class="aside aside1"> 
+                    <h2>Luas Segitiga</h2>
+                    <p>
+                   <strong> Luas Segitiga, yaitu:
+                    <p>  L = 1/2 x a x t </p></strong>
+                    </p>
+                    <h2>Menghitung Luas Segitiga</h2>
+                    <label for="">Alas Segitiga</label><br>
+                    <input type="number" id="alasLuas"><br>
+                    <label for="">Tinggi Segitiga</label><br>
+                    <input type="number" id="tinggiLuas"><br>
+                    <button id="hitungLuas">Hitung</button>
+                    <div id="outputLuas"></div>
+                </aside>
+                <aside class="aside aside2">
+                    <h2>Keliling Segitiga</h2>
+                    <p>
+                    <strong> Keliling segitiga, yaitu :
+                    <p> Kll = a + b + c </p></strong>
+                    </p>
+                    <h2>Menghitung Keliling Segitiga</h2>  
+                    <label for="">Alas Segitiga</label><br>
+                    <input type="number" id="alasKeliling"><br>
+                    <label for="">Sisi Miring b</label><br>
+                    <input type="number" id="sisiMiringb"><br>
+                    <label for="">Sisi Miring c</label><br>
+                    <input type="number" id="sisiMiringc"><br>
+                    <button id="hitungKeliling">Hitung</button>
+                    <div id="outputKeliling"></div>
+                </aside>
+            </article>
+    </main>
+    <script>
+        document.getElementById('hitungLuas').addEventListener('click', function() {
+            let alasLuas = parseFloat(document.getElementById('alasLuas').value);
+            let tinggiLuas = parseFloat(document.getElementById('tinggiLuas').value);
+            let luas = 0.5 * alasLuas * tinggiLuas;
+            document.getElementById('outputLuas').innerHTML = `Luas Segitiga adalah ${luas} cm<sup>2</sup>`;
+        });
+
+        document.getElementById('hitungKeliling').addEventListener('click', function() {
+            let alasKeliling = parseFloat(document.getElementById('alasKeliling').value);
+            let sisiMiringb = parseFloat(document.getElementById('sisiMiringb').value);
+            let sisiMiringc = parseFloat(document.getElementById('sisiMiringc').value);
+            let keliling = alasKeliling + sisiMiringb + sisiMiringc;
+            document.getElementById('outputKeliling').innerHTML = `Keliling Segitiga adalah ${keliling} cm`;
+        });
+    </script>
+</body>
+</html>

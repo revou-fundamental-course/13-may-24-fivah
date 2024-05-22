@@ -1,0 +1,47 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper>*{
+    padding: 5%;
+    margin: 5px;
+    flex: 40%;
+    border-radius: 10px;
+}
+
+.header{
+    background: rgb(206, 217, 224);
+    height: 280px;
+}
+
+.aside1{
+    background: rgb(110, 235, 187);
+    height: 300px;
+}
+
+.aside2{
+    background: palevioletred;
+    height: 350px;
+}
+@media all and (min-width: 200px){
+    .main{
+        flex: 4;
+    }
+
+    .aside1{
+        order: 3;
+    }
+
+    .aside2{
+        order: 3;
+    }
+
+}
+
+@media all and (min-width: 100px){
+    .aside{
+        flex: 2;
+    }
+}
